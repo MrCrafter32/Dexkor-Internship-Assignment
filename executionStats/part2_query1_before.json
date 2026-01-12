@@ -1,0 +1,55 @@
+{
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 20,
+    "executionTimeMillis": 31,
+    "totalKeysExamined": 0,
+    "totalDocsExamined": 50000,
+    "executionStages": {
+      "isCached": false,
+      "stage": "SORT",
+      "nReturned": 20,
+      "executionTimeMillisEstimate": 18,
+      "works": 50022,
+      "advanced": 20,
+      "needTime": 50001,
+      "needYield": 0,
+      "saveState": 2,
+      "restoreState": 2,
+      "isEOF": 1,
+      "sortPattern": { "createdAt": -1 },
+      "memLimit": 104857600,
+      "limitAmount": 20,
+      "type": "simple",
+      "totalDataSizeSorted": 6863,
+      "usedDisk": false,
+      "spills": 0,
+      "spilledRecords": 0,
+      "spilledBytes": 0,
+      "spilledDataStorageSize": 0,
+      "inputStage": {
+        "stage": "COLLSCAN",
+        "filter": {
+          "$and": [
+            { "status": { "$eq": "open" } },
+            { "tenantId": { "$eq": "tenant_101" } },
+            {
+              "createdAt": { "$gte": "2025-01-01T00:00:00.000Z" }
+            }
+          ]
+        },
+        "nReturned": 2500,
+        "executionTimeMillisEstimate": 18,
+        "works": 50001,
+        "advanced": 2500,
+        "needTime": 47500,
+        "needYield": 0,
+        "saveState": 2,
+        "restoreState": 2,
+        "isEOF": 1,
+        "direction": "forward",
+        "docsExamined": 50000
+      }
+    }
+  }
+}

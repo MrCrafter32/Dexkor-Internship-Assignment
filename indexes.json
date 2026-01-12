@@ -1,0 +1,47 @@
+[
+    {
+      "name": "open_tickets_dashboard",
+      "keys": {
+        "tenantId": 1,
+        "status": 1,
+        "createdAt": -1
+      },
+      "purpose": "Fetch latest open tickets per tenant for dashboard views"
+    },
+    {
+      "name": "agent_workload_view",
+      "keys": {
+        "agentId": 1,
+        "status": 1
+      },
+      "purpose": "Enable supervisors to analyze ticket workloads per agent"
+    },
+    {
+      "name": "sla_escalation_partial",
+      "keys": {
+        "createdAt": 1
+      },
+      "partialFilterExpression": {
+        "status": {
+          "$in": ["open", "pending"]
+        }
+      },
+      "purpose": "Identify unresolved tickets that exceed SLA thresholds while excluding closed tickets"
+    },
+    {
+      "name": "tag_based_filtering",
+      "keys": {
+        "tags": 1
+      },
+      "purpose": "Filter tickets by issue category using multikey indexing"
+    },
+    {
+      "name": "full_text_search",
+      "keys": {
+        "subject": "text",
+        "description": "text",
+        "tags": "text"
+      },
+      "purpose": "Enable efficient full-text search across ticket content"
+    }
+]

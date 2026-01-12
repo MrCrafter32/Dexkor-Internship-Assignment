@@ -1,0 +1,25 @@
+{
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 0,
+    "executionTimeMillis": 45,
+    "totalKeysExamined": 0,
+    "totalDocsExamined": 50000,
+    "executionStages": {
+      "isCached": false,
+      "stage": "COLLSCAN",
+      "filter": { "description": { "$regex": "refund", "$options": "i" } },
+      "nReturned": 0,
+      "executionTimeMillisEstimate": 40,
+      "works": 50001,
+      "advanced": 0,
+      "needTime": 50000,
+      "needYield": 0,
+      "saveState": 2,
+      "restoreState": 2,
+      "isEOF": 1,
+      "direction": "forward",
+      "docsExamined": 50000
+    }
+  }
+}
